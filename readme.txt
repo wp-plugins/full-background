@@ -48,7 +48,8 @@ Add responsive full background to your website easily, compatible with all brows
 4. In "Background Link" field, enter your background image link.
 5. Click on 'Save Changes' button.
 6. Enjoy!.
-* For more info, [Read this article](http://wp-plugins.in/wordpress-background-image).
+
+For more info, [Read this article](http://wp-plugins.in/wordpress-background-image).
 
 == Frequently Asked Questions ==
 

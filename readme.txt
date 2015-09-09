@@ -1,7 +1,7 @@
 === Full Background ===
 Contributors: Alobaidi
 Donate link: http://j.mp/WPTime_donations
-Tags: image background, background image, responsive, full background, responsive background, full, background, option, options, widget, Post, plugin, admin, posts, sidebar, google, twitter, images, comments, page, shortcode, image
+Tags: image background, background image, responsive, full background, responsive background, full, background, option, options, retina, rtl, widget, Post, plugin, admin, posts, sidebar, google, twitter, images, comments, page, shortcode, image
 Requires at least: 3.0
 Tested up to: 4.3
 Stable tag: 1.0.0

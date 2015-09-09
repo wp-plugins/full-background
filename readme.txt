@@ -3,7 +3,7 @@ Contributors: Alobaidi
 Donate link: http://j.mp/WPTime_donations
 Tags: image background, background image, responsive, full background, responsive background, full, background, option, options, widget, Post, plugin, admin, posts, sidebar, google, twitter, images, comments, page, shortcode, image
 Requires at least: 3.0
-Tested up to: 4.2.4
+Tested up to: 4.3
 Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -31,11 +31,6 @@ Add responsive full background to your website easily, compatible with all brows
 * [Premium WordPress themes on Themeforest.](http://j.mp/TF_WPTime)
 * [Premium WordPress plugins on Codecanyon.](http://j.mp/CC_WPTime)
 
-### About
-
-* [The plugin designed and developed by Alobaidi.](http://wp-plugins.in)
-* [Alobaidi on Twitter.](http://wp-plugins.in/1SQld8g)
-
 ### More Plugins
 
 * [My Plugins](https://profiles.wordpress.org/alobaidi#content-plugins)
@@ -53,8 +48,9 @@ For more info, [Read this article](http://wp-plugins.in/wordpress-background-ima
 
 == Frequently Asked Questions ==
 
-* [For more questions or help, contact me.](http://wp-plugins.in)
-* [Or ask me on twitter.](http://wp-plugins.in/1SQld8g)
+* For more info, [Read this article](http://wp-plugins.in/wordpress-background-image).
+* [For more questions or help, contact me.](http://wp-plugins.in/1XnA5Qr)
+* [Or ask me on twitter.](http://wp-plugins.in/1L6zCZL)
 
 == Changelog ==
 

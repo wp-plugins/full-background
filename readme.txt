@@ -1,20 +1,27 @@
 === Full Background ===
 Contributors: Alobaidi
 Donate link: http://j.mp/WPTime_donations
-Tags: image background, background image, responsive, full background, responsive background, full, background, option, options, retina, rtl, widget, Post, plugin, admin, posts, sidebar, google, twitter, images, comments, page, shortcode, image
-Requires at least: 3.0
+Tags: image background, background image, responsive, full background, responsive background, full, background, option, options, retina, rtl, random, random background, rotate background, rotate, rotating, easy, unlimited, rotator, widget, Post, plugin, admin, posts, sidebar, google, twitter, images, comments, page, shortcode, image
+Requires at least: 3.1
 Tested up to: 4.3
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Add responsive full background to your website easily, compatible with all browsers and with phone and tablet.
+Add responsive full background to your website easily, random background support and unlimited backgrounds, compatible with all major browsers and with phone and tablet.
 
 == Description ==
 
 ### Full Background 
 
-Add responsive full background to your website easily, compatible with all browsers and with iPhone, iPad, and all phone and tablets, just upload the plugin, activate it, add your background link, save changes, enjoy!.
+Add responsive full background to your website easily, random background support and unlimited backgrounds, compatible with all major browsers and with phone and tablet.
+
+### Features
+
+1. Responsive.
+2. Compatible with all major browsers and with phone and tablet.
+3. Random background support and unlimited backgrounds.
+4. Easy to use, one option only.
 
 ### Live Demo 
 
@@ -39,10 +46,8 @@ Add responsive full background to your website easily, compatible with all brows
 
 1. Upload 'full-background' folder to the '/wp-content/plugins/' directory.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
-3. Go to wp-admin > Plugins > Full Background.
-4. In "Background Link" field, enter your background image link.
-5. Click on 'Save Changes' button.
-6. Enjoy!.
+3. Go to Plugins menu > Full Background.
+4. In "Backgrounds Links" field, enter list of backgrounds links, one link per line, will be display random background, but if you want one background only, enter one link only.
 
 For more info, [Read this article](http://wp-plugins.in/wordpress-background-image).
 
@@ -53,6 +58,19 @@ For more info, [Read this article](http://wp-plugins.in/wordpress-background-ima
 * [Or ask me on twitter.](http://wp-plugins.in/1L6zCZL)
 
 == Changelog ==
+
+= 1.0.1 =
+
+1. Fixing background position if user is logged in.
+2. Random background support.
+
+### Usage
+
+1. After update, go to Plugins menu > Full Background.
+2. You will find new field "Backgrounds Links".
+3. In "Backgrounds Links" field, enter list of backgrounds links, one link per line, will be display random background, but if you want one background only, enter one link only.
+
+[Read about this update](http://wp-plugins.in/wordpress-background-image)
 
 = 1.0.0 =
 

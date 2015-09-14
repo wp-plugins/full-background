@@ -13,5 +13,6 @@ if( ! defined( 'WP_UNINSTALL_PLUGIN' ) )
 	if uninstalled plugin, this options will be deleted
 */
 delete_option('alobaidi_full_background_link');
+delete_option('alobaidi_full_background_random');
 
 ?>

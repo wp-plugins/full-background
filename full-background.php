@@ -2,8 +2,8 @@
 /*
 Plugin Name: Full Background
 Plugin URI: http://wp-plugins.in/wordpress-background-image
-Description: Add responsive full background to your website easily, compatible with all browsers and with phone and tablet.
-Version: 1.0.0
+Description: Add responsive full background to your website easily, random background support and unlimited backgrounds, compatible with all major browsers and with phone and tablet.
+Version: 1.0.1
 Author: Alobaidi
 Author URI: http://wp-plugins.in
 License: GPLv2 or later
@@ -26,7 +26,7 @@ License: GPLv2 or later
 */
     
 
-    defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
+defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
 
 function alobaidi_full_background_plugin_row_meta( $links, $file ) {
@@ -84,7 +84,7 @@ add_filter( 'plugin_action_links', 'alobaidi_full_background_plugin_action_links
 
 
 	function alobaidi_full_background_register_setting() {
-		register_setting( 'alobaidi_setting_background_link', 'alobaidi_full_background_link' );
+		register_setting( 'alobaidi_setting_background_link', 'alobaidi_full_background_random' );
 	}
 	add_action( 'admin_init', 'alobaidi_full_background_register_setting' );
 	
@@ -103,18 +103,17 @@ add_filter( 'plugin_action_links', 'alobaidi_full_background_plugin_action_links
                 
             	<form method="post" action="options.php">
                 	<?php settings_fields( 'alobaidi_setting_background_link' ); ?>
-                        <?php
-                        	$rf_background_link_filter = get_option('alobaidi_full_background_link');
-						?>
                 	<table class="form-table">
                 		<tbody>
-                    		<tr>
-                        		<th><label for="rf_background_link">Background Link</label></th>
-                            	<td>
-                                    <input class="regular-text" name="alobaidi_full_background_link" type="text" id="rf_background_link" value="<?php echo esc_attr($rf_background_link_filter); ?>">
-                                    <p class="description">Enter your background image link, <?php if ( is_ssl() ) {echo '<a href="'.admin_url( 'media-new.php', 'https' ).'" target="_blank">Upload Image</a>';}else{echo '<a href="'.admin_url( 'media-new.php', 'http' ).'" target="_blank">Upload Image</a>';}?>.</p>
-								</td>
-                        	</tr>
+
+                            <tr>
+                                <th><label for="alobaidi_full_background_random">Backgrounds Links</label></th>
+                                <td>
+                                    <textarea id="alobaidi_full_background_random" name="alobaidi_full_background_random" rows="10" cols="50" class="large-text code" style="white-space:nowrap !important;"><?php echo esc_textarea( get_option('alobaidi_full_background_random') ); ?></textarea>
+                                    <p class="description">Enter list of backgrounds links, one link per line, will be display random background, but if you want one background only, enter one link only. <?php if ( is_ssl() ) {echo '<a href="'.admin_url( 'media-new.php', 'https' ).'" target="_blank">Upload Backgrounds</a>';}else{echo '<a href="'.admin_url( 'media-new.php', 'http' ).'" target="_blank">Upload Backgrounds</a>';}?></p>
+                                </td>
+                            </tr>
+
                     	</tbody>
                     </table>
                     <p class="submit"><input id="submit" class="button button-primary" type="submit" name="submit" value="Save Changes"></p>
@@ -138,10 +137,21 @@ add_filter( 'plugin_action_links', 'alobaidi_full_background_plugin_action_links
 function alobaidi_full_background_css(){
 	?>
 
-		<?php if( get_option('alobaidi_full_background_link') )  : ?>
-    
+		<?php if( get_option('alobaidi_full_background_random') )  : ?>
+
+    		<?php
+    			$get_links 			= 	str_replace(' ', '', get_option('alobaidi_full_background_random') );
+    			$preg_replace 		= 	preg_replace( "/\s+/", "\n", $get_links );
+    			$explode 			= 	explode("\n", $preg_replace);
+    			$make_array 		= 	(array) $explode;
+    			$array 				=	$make_array;
+    			$count				=	count($array) - 1;
+    			$random 			=	rand(0, $count);
+    			$background_link 	= 	$array[$random];
+    		?>
+
 			<style type="text/css">
-				/* Responsive Full Background Plugin */
+				/* Alobaidi Full Background Plugin */
 				html{
 					background-image:none !important;
 					background:none !important;
@@ -149,12 +159,16 @@ function alobaidi_full_background_css(){
 				
 				body{
 					background-image:none !important;
-					background:url(<?php echo get_option('alobaidi_full_background_link'); ?>) fixed no-repeat !important;
+					background:url(<?php echo $background_link; ?>) 0 0 fixed no-repeat !important;
 					background-size:100% 100% !important;
 					-webkit-background-size:100% 100% !important;
 					-moz-background-size:100% 100% !important;
 					-ms-background-size:100% 100% !important;
 					-o-background-size:100% 100% !important;
+				}
+
+				body.logged-in{
+					background-position: 0 -32px !important;
 				}
 			</style>
 		<?php endif; ?>

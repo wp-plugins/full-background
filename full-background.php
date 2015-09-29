@@ -78,7 +78,7 @@ add_filter( 'plugin_action_links', 'alobaidi_full_background_plugin_action_links
 
 
 	function alobaidi_full_background() {
-		add_plugins_page( 'Full Background Settings', 'Full Background', 'update_core', 'alobaidi_full_background', 'alobaidi_full_background_settings' );
+		add_plugins_page( 'Full Background Settings', 'Full Background', 'manage_options', 'alobaidi_full_background', 'alobaidi_full_background_settings' );
 	}
 	add_action( 'admin_menu', 'alobaidi_full_background' );
 
